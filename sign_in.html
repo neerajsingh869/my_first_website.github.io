@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Adding Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"> 
+
+    <!-- Linking CSS -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <!-- Toggler color changing -->
+    <style>
+    	.custom-toggler.navbar-toggler { 
+			border-color: black; 
+			margin-right: 7px; 
+		}
+		.custom-toggler .navbar-toggler-icon{
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+		} 
+    </style>
+
+    <!-- Sign In -->
+    <style> 
+    /*border to the form*/ 
+      
+    .sign_form { 
+        border: 150px solid #f1f1f1; 
+    } 
+    /*assign full width inputs*/ 
+      
+    .sign_input[type=text], 
+    .sign_input[type=password] { 
+        width: 100%; 
+        padding: 12px 20px; 
+        margin: 8px 0; 
+        display: inline-block; 
+        border: 1px solid #ccc; 
+        box-sizing: border-box; 
+    } 
+    /*style for the buttons*/ 
+      
+    .sign_button { 
+        background-color: #2699FB; 
+        color: white; 
+        padding: 14px 20px; 
+        margin: 8px 0; 
+        border: none; 
+        cursor: pointer; 
+        width: 100%; 
+    } 
+    /*hover effect for the button*/ 
+      
+    .sign_button:hover { 
+        opacity: 0.8; 
+    } 
+    
+    /*centre the display image inside the container*/ 
+      
+    .imgcontainer { 
+        text-align: center; 
+        margin: 24px 0 12px 0; 
+    } 
+    
+    /*padding to the container*/ 
+      
+    .container { 
+        padding: 16px; 
+    } 
+    
+    /*styles for span and cancel button on small screens*/ 
+      
+    @media screen and (max-width: 300px) { 
+        span.user_psw { 
+            display: block; 
+            float: none; 
+        } 
+        .cancelbtn { 
+            width: 100%; 
+        } 
+    } 
+</style> 
+
+	<title>Sign In</title>
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<nav class="navbar navbar-expand-xl navbar-custom">
+			<!-- CleekBlogs.Com Tab on Navbar works like Home. -->
+  			<a class="navbar-brand" href="index.html" style="font-size: 30px;">CleekBlogs.com</a>
+  			<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  			</button>
+			<div class="collapse navbar-collapse" id="navbarsExample06">
+    			<ul class="navbar-nav ml-auto">
+      				<li class="nav-item">
+        				<a class="nav-link" href="about.html"><button class="btn info">About Me</button></a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="sign_in.html"><button class="btn info">Sign In</button></a>
+      				</li>
+      			</ul>
+    			<form class="form-inline my-2 my-md-0" style="margin-right: 40px">
+      				<input class="form-control" type="text" placeholder="Search">
+    			</form>
+  			</div>
+		</nav>
+	</header>
+	<hr class="hr1">
+	<!-- Menu Bar/Main Navbar -->
+	<nav class="navbar navbar-expand-xl navbar-custom1">
+		<button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 1px;">
+    	<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarsExample07">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a href="#" class="nav-link"><button class="btn info">Book Summaries</button></a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link"><button class="btn info">Movies, Series and Animations</button></a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link"><button class="btn info">Level Up Your Vocabularies</button></a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link"><button class="btn info">My Thought</button></a>
+				</li>
+			</ul>
+
+		</div>
+	</nav>
+	<hr class="hr1">
+
+	<!-- Sign In Form -->
+    <!-- <?php 
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "cleekblogs";
+
+        
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+        }
+
+        if (isset($_POST['signal'])) {
+            // Reading Subscribers name and email
+            $userName = $_POST['user_name'];
+            $userPassword = $_POST['user_email'];
+            $sql = "INSERT INTO signin_details (user_name, user_email)
+            VALUES ('$userName', '$userPassword')";
+        }
+        
+
+        $conn->query($sql);
+    ?> -->
+	<form action="#" class="sign_form" method="POST"> 
+  		 <div class="container">
+  		 	<h2>Sign In</h2>
+            <label><b>Username</b></label><br> 
+            <input type="text" placeholder="Enter Username" name="user_name" required class="sign_input"><br> 
+  
+            <label><b>Password</b></label> 
+            <input type="password" placeholder="Enter Password" name="user_password" required class="sign_input">
+            <button type="submit" name="signal" class="sign_button">Sign In</button> 
+        </div> 
+  	</form>
+        
+	<!-- Footer -->
+	<footer>
+		<div class="row">
+			<div class="col-sm-4">
+				<p align="center" style="font-size: 30px;">CleekBlogs.Com</p>
+			</div>
+			<div class="col-sm-4
+			"></div>
+			<div class="col-sm-4">
+				<ul>
+					<li class="footer_lists">
+						<a href="#" class="footer_links">Home</a>
+					</li>
+					<li class="footer_lists"><span class="divider">/</span>
+						<a href="#" class="footer_links">Contact Me</a>
+					</li>
+					<li class="footer_lists"><span class="divider">/</span>
+						<a href="#" class="footer_links">Privacy Policy</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p align="center">Copyright &copy; CleekBlogs.Com 2020. All rights reserved.</p>
+		<p align="center">Made with &hearts; in India</p>
+	</footer>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>

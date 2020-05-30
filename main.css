@@ -1,0 +1,125 @@
+*{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.hr1{
+	margin: 0;
+}
+
+ul{
+	list-style: none;
+}
+
+/*Header Style*/
+
+.navbar-custom{
+	background-color: white;
+	padding: 10px;
+}
+
+.navbar-custom .navbar-brand, 
+        .navbar-custom .navbar-text { 
+            color: black;
+            margin-left: 20px; 
+        } 
+
+.navbar-custom .nav-link, 
+        .navbar-custom .navbar-text { 
+            color: black; 
+            margin-right: 40px;
+        }
+
+/*End Header Style*/
+
+/*Menu Style*/
+
+.navbar-custom1 .navbar-brand, 
+        .navbar-custom1 .nav-link {
+			margin-left: 130px;
+			margin-right: 100px;
+        }
+
+.navbar-custom1 .nav-link, 
+        .navbar-custom1 .navbar-text {
+			color: black;
+        }
+
+.btn {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.info:hover {
+    background: #000000;
+    color: white;
+}
+
+.menu_div{
+	margin-top: 16px;
+}
+
+/*End Menu Style*/
+
+/*Carousal*/
+
+.caro_usal{
+	padding: 20px;
+}
+
+/*End Carousal*/
+
+/*Latest Articles*/
+
+#latest_articles{
+	margin-top: 30px;
+}
+
+a.articles_links{
+	color: black;
+
+}
+
+a.articles_links:hover{
+	color: #00B9FF;
+	text-decoration: none;
+}
+
+.btn-custom{
+	background-color: #000000;
+	padding: 10px;
+}
+
+/*About Me*/
+.aboutme{
+	margin-left: 150px;
+	margin-right: 150px;
+}
+
+/*Sign In*/
+
+
+/*Footer*/
+
+footer{
+	padding: 20px;
+	background-color: #00B9FF;
+	color: white;
+	margin-top: 50px;
+}
+
+
+.footer_links{
+	color: white;
+	padding: 20px;
+}
+
+.footer_links:hover{
+	color: black;
+}
+
+.footer_lists{
+	display: inline;
+
+}
